@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-RailsTest::Application.config.secret_token = '8db0e6ab62d7080ca9943adec16d447e8fec8321bd14f4d13a2c8860334518e2f80ec11474c8f5fcb9d0260194ac595f7741d612fbf9f4d52b922896be493f7c'
+RailsTest::Application.config.secret_token = '5d17baf847a109c1250629be17169bc7b459fa8ef25801184493b464a65cf7e057f743741cca363c9f32690361b9585309147da6dab99a586d7708685fdfe1a0'
