@@ -2,11 +2,12 @@ require 'spec_helper'
 
 describe "Home" do
 
-  describe "page" do
-    it "should have the content 'TrackWeight'" do
-      visit '/'
-      page.should have_content('Track Weight')
-    end
+  subject { page }
+
+  describe "Page" do
+    before { visit root_path }
+    
+    it { should have_selector('h1', text: "TrackWeight") }
   end
   
 end
