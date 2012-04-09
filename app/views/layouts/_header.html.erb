@@ -1,10 +1,17 @@
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "TrackWeight", root_path, class: "brand" %>
+      <h3>
+        <%= link_to "TrackWeight", root_path, class: "brand" %>
+      </h3>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
+          <li>
+            <%= link_to(root_path) do %>
+              <i class="icon-home"></i> Home
+            <% end %>
+          </li>
+            
           <% if signed_in? %>
             <li><%= link_to "Users", '#' %></li>
             <li id="fat-menu" class="dropdown">
@@ -12,11 +19,21 @@
                 Account <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", '#' %></li>
+                <li>
+                  <%= link_to current_user do %>
+                    <i class="icon-user"></i> Profile
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to '#' do %>
+                    <i class="icon-cog"></i> Settings
+                  <% end %>
+                </li>                
                 <li class="divider"></li>
                 <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
+                  <%= link_to(signout_path, method: "delete") do %>
+                    <i class="icon-off"></i> Sign out
+                  <% end %>
                 </li>
               </ul>
             </li>
